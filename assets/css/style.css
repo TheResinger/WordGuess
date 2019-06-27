@@ -3,7 +3,20 @@
     box-sizing: border-box;
 }
 
-.jumbotron
+html,
+body 
 {
     max-width: 960px;
+    margin: 0 auto;
+}
+
+#letterDisplay
+{
+    font-size: 50px;
+    border: 2px dashed #000;
+}
+
+#headInfo
+{
+    border: 2px dashed #000;
 }

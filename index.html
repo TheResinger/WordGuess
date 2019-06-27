@@ -12,19 +12,21 @@
 <body>
     <div class="container">
         <div class="row">    
-            <div class="jumbotron border col-md-12 text-center">
+            <div class="col-md-12 text-center" id="headInfo">
                 <h1>Hangman</h1>
                 <h2 id="alert"></h2>
                 <h2 id="alert2"></h2>
             </div>
         </div>
+        <br>
+        <div class="row">
+            <p class="col-md-12 text-center" id="letterDisplay"></p>
+        </div>
+    <p class="text-center">Letters Guessed : <span id="guessedLetters"></span></p>
+    <p class="text-center">Errors : <span id="errorCount"></span></p>
+    <p class="text-center">Wins : <span id="winCount"></span></p>
+    <p class="text-center">Losses : <span id="lossCount"></span></p>
     </div>
-    <p id="letterDisplay"></p>
-    <p>Letters Guessed : <span id="guessedLetters"></span></p>
-    <p>Errors : <span id="errorCount"></span></p>
-    <p>Wins : <span id="winCount"></span></p>
-    <p>Losses : <span id="lossCount"></span></p>
-
     <script src="assets/javascript/game.js"></script>
 </body>
 </html>
