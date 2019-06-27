@@ -1,0 +1,9 @@
+* 
+{
+    box-sizing: border-box;
+}
+
+.jumbotron
+{
+    max-width: 960px;
+}

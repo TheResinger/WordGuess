@@ -1,6 +1,6 @@
 var wins = 0;
 var losses = 0;
-var maxErrors = 5;
+var maxErrors = 10;
 var validGuesses = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
 
@@ -34,26 +34,26 @@ document.onkeyup = function(event)
 function hangman()
 {
     this.wordList = [
-//         rescue
-// explode
-// seal
-// calorie
-// economy
-// loan
-// architecture
-// cage
-// fax
-// blast
-// throat
-// strip
-// primary
-// area
-// dough
-// conception
-// log
-// speed
-// psychology
-// ring
+    "rescue",
+    "explode",
+    "seal",
+    "calorie",
+    "economy",
+    "loan",
+    "architecture",
+    "cage",
+    "fax",
+    "blast",
+    "throat",
+    "strip",
+    "primary",
+    "area",
+    "dough",
+    "conception",
+    "log",
+    "speed",
+    "psychology",
+    "ring",
     "test", 
     "testing"
     ];
@@ -63,6 +63,7 @@ function hangman()
     this.correctLetters = [];
     this.gameOver = false;
     document.getElementById("alert").innerHTML = "Press any key to start!";
+    document.getElementById("alert2").innerHTML = " ";
     for(var i = 0; i < this.word.length; i++)
     {
         this.correctLetters[i] = (false);
@@ -74,7 +75,7 @@ hangman.prototype.checkGuess = function(char)
 {
     this.usedKeys.push(char);
     
-    document.getElementById("alert").innerHTML = "";
+    document.getElementById("alert").innerHTML = " ";
     var inWord = false;
     for(var i = 0; i < this.word.length; i++)
     {
@@ -99,6 +100,7 @@ hangman.prototype.checkGuess = function(char)
 		wins++;
         this.gameOver = true;
         document.getElementById("alert").innerHTML = "You Win!"
+        document.getElementById("alert2").innerHTML = "Press any key to play again."
 	}
     gamestate.updatePageData();
 }
