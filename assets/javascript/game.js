@@ -17,17 +17,24 @@ document.onkeyup = function(event)
 {
     var userGuess = event.key;
 
-    if(!gamestate.gameOver)
+    if(gamestate.gameOver)
     {
+        gamestate = new wordGuess();
+        gamestate.updatePageData();
+    
+        // if(validGuesses.includes(userGuess) && !gamestate.usedKeys.includes(userGuess))
+        // {
+        //     gamestate.checkGuess(userGuess);
+        // }
+    }
+    else
+    {
+        // gamestate = new wordGuess();
+        // gamestate.updatePageData();
         if(validGuesses.includes(userGuess) && !gamestate.usedKeys.includes(userGuess))
         {
             gamestate.checkGuess(userGuess);
         }
-    }
-    else
-    {
-        gamestate = new wordGuess();
-        gamestate.updatePageData();
     }
 }
 //Main Game settings
