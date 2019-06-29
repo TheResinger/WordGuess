@@ -10,7 +10,7 @@ var errorElement = document.getElementById("errorCount");
 var winElement = document.getElementById("winCount");
 var lossElement = document.getElementById("lossCount");
 
-var gamestate = new hangman();
+var gamestate = new wordGuess();
 
 //onKeyUp handling
 document.onkeyup = function(event)
@@ -26,37 +26,14 @@ document.onkeyup = function(event)
     }
     else
     {
-        gamestate = new hangman();
+        gamestate = new wordGuess();
         gamestate.updatePageData();
     }
 }
 //Main Game settings
-function hangman()
+function wordGuess()
 {
-    this.wordList = [
-    "rescue",
-    "explode",
-    "seal",
-    "calorie",
-    "economy",
-    "loan",
-    "architecture",
-    "cage",
-    "fax",
-    "blast",
-    "throat",
-    "strip",
-    "primary",
-    "area",
-    "dough",
-    "conception",
-    "log",
-    "speed",
-    "psychology",
-    "ring",
-    "test", 
-    "testing"
-    ];
+    this.wordList = ["rescue", "explode", "seal", "calorie", "economy", "loan", "architecture", "cage", "fax", "blast", "throat", "strip", "primary", "area", "dough", "conception", "log", "speed", "psychology", "ring", "test",  "testing"];
     this.word = this.wordList[Math.floor(Math.random() * this.wordList.length)];
     this.errors = 0;
     this.usedKeys = [];
@@ -71,7 +48,7 @@ function hangman()
 }
 
 //Function to check if inputted key matches the word
-hangman.prototype.checkGuess = function(char)
+wordGuess.prototype.checkGuess = function(char)
 {
     this.usedKeys.push(char);
     
@@ -106,7 +83,7 @@ hangman.prototype.checkGuess = function(char)
 }
 
 //function to update the page data
-hangman.prototype.updatePageData = function()
+wordGuess.prototype.updatePageData = function()
 {
     var tempString = "";
     for(var i = 0; i < this.correctLetters.length; i++)
