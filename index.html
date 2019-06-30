@@ -22,10 +22,24 @@
         <div class="row">
             <p class="col-md-12 text-center" id="letterDisplay"></p>
         </div>
-    <p class="text-left">Letters Guessed : <span id="guessedLetters"></span></p>
-    <p class="text-center">Errors : <span id="errorCount"></span></p>
-    <p class="text-center">Wins : <span id="winCount"></span></p>
-    <p class="text-center">Losses : <span id="lossCount"></span></p>
+        <div id="stats">
+            <div id="guessed" class="row">
+                <p class="text-right col-md-6">Letters Guessed :</p>
+                <p id="guessedLetters" class="text-left col-md-6"></p>
+            </div>
+            <div class="row">
+                <p class="text-right col-md-6">Errors : </p>
+                <p class="text-left col-md-6" id="errorCount"></p>
+            </div>
+            <div class="row">
+                <p class="text-right col-md-6">Wins :</p>
+                <p class="text-left col-md-6" id="winCount"></p>
+            </div>
+            <div class="row">
+                <p class="text-right col-md-6">Losses :</p>
+                <p class="text-left col-md-6" id="lossCount"></p>
+            </div>
+        </div>
     </div>
     <script src="assets/javascript/game.js"></script>
 </body>

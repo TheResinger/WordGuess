@@ -8,16 +8,29 @@ body
 {
     max-width: 960px;
     margin: 0 auto;
+    background: url(../images/background.png);
+    color: greenyellow;
 }
+
+
 
 #letterDisplay
 {
     font-size: 50px;
-    border: 2px dashed #000;
+    border: 2px dashed greenyellow;
 }
 
 
 #headInfo
 {
-    border: 2px dashed #000;
+    margin-top: 20px;
+    border: 2px dashed greenyellow;
+}
+
+#stats {
+    border: 2px dashed greenyellow;
+    margin: auto -15px;
+}
+#guessed {
+    margin-top: 10px;
 }

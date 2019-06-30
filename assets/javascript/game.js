@@ -21,16 +21,9 @@ document.onkeyup = function(event)
     {
         gamestate = new wordGuess();
         gamestate.updatePageData();
-    
-        // if(validGuesses.includes(userGuess) && !gamestate.usedKeys.includes(userGuess))
-        // {
-        //     gamestate.checkGuess(userGuess);
-        // }
     }
     else
     {
-        // gamestate = new wordGuess();
-        // gamestate.updatePageData();
         if(validGuesses.includes(userGuess) && !gamestate.usedKeys.includes(userGuess))
         {
             gamestate.checkGuess(userGuess);
@@ -92,48 +85,48 @@ wordGuess.prototype.checkGuess = function(char)
 //function to update the page data
 wordGuess.prototype.updatePageData = function()
 {
-    var tempString = "";
+    var temp = "";
     for(var i = 0; i < this.correctLetters.length; i++)
    {
 
-       tempString += ((this.correctLetters[i] || this.gameOver) ? this.word.charAt(i).toUpperCase() : "_");
+       temp += ((this.correctLetters[i] || this.gameOver) ? this.word.charAt(i).toUpperCase() : "_");
        if(i < (this.correctLetters.length - 1))
        {
-        tempString += " ";
+        temp += " ";
        }   
    } 
-   wordElement.textContent = tempString;
+   wordElement.textContent = temp;
 
-   tempString = "";
+   temp = "";
    for(var i = 0; i < this.usedKeys.length; i++)
    {
-       tempString += (this.usedKeys[i].toUpperCase());
+       temp += (this.usedKeys[i].toUpperCase());
        if(i < (this.usedKeys.length - 1))
        {
-        tempString += " ";
+        temp += " ";
        }
    }
-   for(var i = tempString.length; i < 51; i++)
+   for(var i = temp.length; i < 51; i++)
    {
-       tempString += " ";
+       temp += " ";
    }
-   usedKeysElement.textContent = tempString;
-   tempString = this.errors + " / " + maxErrors;
-   for(var i = tempString.length; i < 32; i++)
+   usedKeysElement.textContent = temp;
+   temp = this.errors + " / " + maxErrors;
+   for(var i = temp.length; i < 32; i++)
    {
-       tempString += " ";
+       temp += " ";
    }
-   errorElement.textContent = tempString;
-   tempString = wins + "";
-	for (var i = tempString.length; i < 45; i++) {
-		tempString += " ";
+   errorElement.textContent = temp;
+   temp = wins + "";
+	for (var i = temp.length; i < 45; i++) {
+		temp += " ";
 	}
-	winElement.textContent = tempString;
+	winElement.textContent = temp;
 
-	tempString = losses + "";
-	for (var i = tempString.length; i < 43; i++) {
-		tempString += " ";
+	temp = losses + "";
+	for (var i = temp.length; i < 43; i++) {
+		temp += " ";
 	}
-    lossElement.textContent = tempString;
+    lossElement.textContent = temp;
 }
 gamestate.updatePageData();
